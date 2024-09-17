@@ -1,7 +1,10 @@
+
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
 import { ProductsData } from "../data/ProductsData";
 import Layout from "../components/Layout/Layout";
+
+
 const ProductDetails = ({ route }) => {
   const [pDetails, setPDetails] = useState({});
   const [qty, setQty] = useState(1);
@@ -35,11 +38,8 @@ const ProductDetails = ({ route }) => {
           <TouchableOpacity
             style={styles.btnCart}
             onPress={() => alert(`${qty} items added to cart`)}
-            disabled={pDetails?.quantity <= 0}
           >
-            <Text style={styles.btnCartText}>
-              {pDetails?.quantity > 0 ? "ADD TO CART" : "OUT OF STOCK"}
-            </Text>
+            <Text style={styles.btnCartText}>ADD TO CART</Text>
           </TouchableOpacity>
           <View style={styles.btnContainer}>
             <TouchableOpacity style={styles.btnQty} onPress={handleRemoveQty}>
@@ -55,6 +55,7 @@ const ProductDetails = ({ route }) => {
     </Layout>
   );
 };
+
 const styles = StyleSheet.create({
   image: {
     height: 300,

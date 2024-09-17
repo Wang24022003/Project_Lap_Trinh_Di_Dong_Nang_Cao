@@ -9,12 +9,12 @@ import LoginScreen from "./src/LoginScreen";
 import Home from "./src/Home";
 import About from "./src/About";
 import ProductDetails from "./src/ProductDetails";
-import Cart from "./src/Cart";
-import Checkout from "./src/Checkout";
-import Payments from "./src/Payments";
-import Login from "./src/auth/Login";
-import Register from "./src/auth/Register";
-import Account from "./src/Account/Account";
+import Cart from "./screens/Cart";
+import Checkout from "./screens/Checkout";
+import Payments from "./screens/Payments";
+import Login from "./screens/auth/Login";
+import Register from "./screens/auth/Register";
+import Account from "./screens/Account/Account";
 
 //routes
 const Stack = createStackNavigator();
