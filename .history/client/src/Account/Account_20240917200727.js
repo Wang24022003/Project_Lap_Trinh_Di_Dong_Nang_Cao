@@ -3,7 +3,8 @@ import React from "react";
 import Layout from "../../components/Layout/Layout";
 import { userData } from "../../data/userData";
 import AntDesign from "react-native-vector-icons/AntDesign";
-const Account = ({ navigation }) => {
+
+const Account = (navigation) => {
   return (
     <Layout>
       <View style={styles.container}>
@@ -56,6 +57,7 @@ const Account = ({ navigation }) => {
     </Layout>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     marginVertical: 20,
