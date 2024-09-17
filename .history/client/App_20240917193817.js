@@ -15,8 +15,8 @@ import Payments from "./src/Payments";
 import Login from "./src/auth/Login";
 import Register from "./src/auth/Register";
 import Account from "./src/Account/Account";
-import Notifications from "./src/Account/Notifications";
-import Profile from "./src/Account/Profile";
+import Notifications from "./screens/Account/Notifications";
+import Profile from "./screens/Account/Profile";
 
 //routes
 const Stack = createStackNavigator();
