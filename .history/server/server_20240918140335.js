@@ -14,8 +14,10 @@ import connectDB from "./config/db.js";
 dotenv.config();
 //database connection
 connectDB();
+
 //stripe configuration
 export const stripe = new Stripe(process.env.STRIPE_API_SECRET);
+
 //cloudinary Config
 cloudinary.v2.config({
   cloud_name: process.env.CLOUDINARY_NAME,
@@ -24,7 +26,6 @@ cloudinary.v2.config({
 });
 //rest object
 const app = express();
-
 //middlewares
 app.use(helmet());
 app.use(mongoSanitize());

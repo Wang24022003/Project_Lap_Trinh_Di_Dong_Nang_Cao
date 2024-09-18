@@ -1,32 +1,29 @@
-import React from "react";
-
-import IntroScreen from "./src/IntroScreen";
-import HomeScreen from "./src/HomeScreen";
-import RegisterScreen from "./src/RegisterScreen";
-import { createStackNavigator } from "@react-navigation/stack";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import LoginScreen from "./src/LoginScreen";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Provider } from "react-redux";
-import Home from "./src/Home";
-import About from "./src/About";
-import ProductDetails from "./src/ProductDetails";
-import Cart from "./src/Cart";
-import Checkout from "./src/Checkout";
-import Payments from "./src/Payments";
-import Login from "./src/auth/Login";
-import Register from "./src/auth/Register";
-import Account from "./src/Account/Account";
-import Notifications from "./src/Account/Notifications";
-import Profile from "./src/Account/Profile";
-import MyOrders from "./src/Account/MyOrders";
-import Dashboard from "./src/Admin/Dashboard";
+import Home from "./screens/Home";
+import About from "./screens/About";
+import ProductDetails from "./screens/ProductDetails";
+import Cart from "./screens/Cart";
+import Checkout from "./screens/Checkout";
+import Payments from "./screens/Payments";
+import Login from "./screens/auth/Login";
+import Register from "./screens/auth/Register";
+import Account from "./screens/Account/Account";
+import Notifications from "./screens/Account/Notifications";
+import Profile from "./screens/Account/Profile";
+import MyOrders from "./screens/Account/MyOrders";
+import Dashboard from "./screens/Admin/Dashboard";
 import store from "./redux/store";
 
 //routes
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+ 
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="login">
@@ -61,5 +58,13 @@ export default function App() {
       </NavigationContainer>
     </Provider>
   );
-};
+}
 
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#fff",
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+// });
